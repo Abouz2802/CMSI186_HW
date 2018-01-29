@@ -108,9 +108,9 @@ public class CalendarStuff {
    public static long daysInMonth( long month, long year ) {
      if (month == 1)
         return 31;
-     }else if (month == 2) && (isLeapYear(year) = true){
+     }else if (month == 2) && (isLeapYear(year) == true){
         return 29;
-     }else
+     }else if (month == 2) && (isLeapYear(year) == false){
         return 28;
      }else if (month == 3){
         return 31;
