@@ -244,11 +244,11 @@ public class CalendarStuff {
      else if (month == 9)
      {System.out.println("SEPTEMBER")};
      else if (month == 10)
-     {System.out.println("OCTOBERober")};
+     {System.out.println("OCTOBER")};
      else if (month == 11)
-     {System.out.println("NOVEMBERber")};
+     {System.out.println("NOVEMBER")};
      else if (month == 12)
-     {System.out.println("DECEMBERmber")};
+     {System.out.println("DECEMBER")};
      else
      throw new IllegalArgumentException( "Illegal month value given to 'toMonthString()'." );
       }
@@ -260,19 +260,19 @@ public class CalendarStuff {
    * @return       String containing the string value of the day (no spaces)
    */
    public static String toDayOfWeekString( int day ) {
-     if (month == 1)
-     {System.out.println("SUNDAYy");}
-     else if (month == 2)
-     {System.out.println("MONDAYay");}
-     else if (month == 3)
+     if (day == 1)
+     {System.out.println("SUNDAY");}
+     else if (day == 2)
+     {System.out.println("MONDAY");}
+     else if (day == 3)
      {System.out.println("TUESDAY");}
-     else if (month == 4)
+     else if (day == 4)
      {System.out.println("WEDNESDAY");}
-     else if (month == 5)
+     else if (day == 5)
      {System.out.println("THURSDAY");}
-     else if (month == 6)
+     else if (day == 6)
      {System.out.println("FRIDAY");}
-     else if (month == 7)
+     else if (day == 7)
      {System.out.println("SATURDAY");}
      else
      throw new IllegalArgumentException( "Illegal month value given to 'toDayOfWeekString()'." );
