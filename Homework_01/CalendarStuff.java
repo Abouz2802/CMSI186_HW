@@ -78,24 +78,12 @@ public class CalendarStuff {
    //and 400, then the output will be true. Otherwise, the output shall be false
 
    public static boolean isLeapYear( long year ) {
-     int year = Integer.parseInt(args[0]);
-     if (year % 4 == 0)
-     {
-        println(year + " is a leap year.");
+     if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+       return true;
      }
-     else if ((year % 4 == 0) && (year % 100 != 0))
-     {
-       println(year + " is a leap year.");
-     }
-     else if (year % 4 == 0) && (year % 100 != 0) && (year % 400 == 0)
-     {
-       println(year + " is a leap year.");
-     }
-     else
-     {
-       println(year + " is not a leap year.");
-     }
-     }
+       return false;
+
+  }
 
   /**
    * A method to calculate the days in a month, including leap years
@@ -106,11 +94,11 @@ public class CalendarStuff {
    *         be decremented to make the appropriate index value
    */
    public static long daysInMonth( long month, long year ) {
-     if (month == 1)
+     if (month == 1){
         return 31;
-     }else if (month == 2) && (isLeapYear(year) == true){
+     }else if ((month == 2) && (isLeapYear(year) == true)){
         return 29;
-     }else if (month == 2) && (isLeapYear(year) == false){
+     }else if ((month == 2) && (isLeapYear(year) == false)){
         return 28;
      }else if (month == 3){
         return 31;
@@ -146,7 +134,7 @@ public class CalendarStuff {
    * @return          boolean which is true if the two dates are exactly the same
    */
    public static boolean dateEquals( long month1, long day1, long year1, long month2, long day2, long year2 ) {
-     if (month1 == month2) && (year1 == year2) && (day1 == day2) {
+     if ((month1 == month2) && (year1 == year2) && (day1 == day2)) {
       return true;
    }
    else
@@ -166,13 +154,10 @@ public class CalendarStuff {
    * @return          int    -1/0/+1 if first date is less than/equal to/greater than second
    */
    public static int compareDate( long month1, long day1, long year1, long month2, long day2, long year2 ) {
-     if (month1 == month2) && (year1 == year2) && (day1 == day2) {
+     if ((month1 == month2) && (year1 == year2) && (day1 == day2)) {
       return 0;
    }
-   else if (month1 > month2) && (year1 == year2) && (day1 == day2) | (month1 == month2) && (year1 > year2) && (day1 == day2) | (month1 == month2) && (year1 == year2) && (day1 > day2)
-          | (month1 > month2) && (year1 > year2) && (day1 == day2) | (month1 > month2) && (year1 == year2) && (day1 > day2)  | (month1 == month2) && (year1 > year2) && (day1 > day2)
-          | (month1 > month2) && (year1 > year2) && (day1 > day2)  | (month1 > month2) && (year1 == year2) && (day1 <= day2) | (month1 == month2) && (year1 > year2) && (day1 <= day2)
-          | (month1 <= month2) && (year1 > year2) && (day1 <= day2)
+   else if ((year1 > year2))
           {
             return 1;
           }
