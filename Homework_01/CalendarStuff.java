@@ -83,7 +83,7 @@ public class CalendarStuff {
      {
         println(year + " is a leap year.");
      }
-     else if ((year % 4 == 0) && (year % 100 != 0));
+     else if ((year % 4 == 0) && (year % 100 != 0))
      {
        println(year + " is a leap year.");
      }
@@ -93,7 +93,7 @@ public class CalendarStuff {
      }
      else
      {
-       println(year + " is not a leap year.")
+       println(year + " is not a leap year.");
      }
      }
 
@@ -107,31 +107,32 @@ public class CalendarStuff {
    */
    public static long daysInMonth( long month, long year ) {
      if (month == 1)
-     {return 31;}
-     else if (month == 2) && (isLeapYear year) = true
-     {return 29;}
-     else
-     {return 28;}
-     else if (month == 3)
-     {return 31;}
-     else if (month == 4)
-     {return 30;}
-     else if (month == 5)
-     {return 31;}
-     else if (month == 6)
-     {return 30;}
-     else if (month == 7)
-     {return 31;}
-     else if (month == 8)
-     {return 31;}
-     else if (month == 9)
-     {return 30;}
-     else if (month == 10)
-     {return 31;}
-     else if (month == 11)
-     {return 30;}
-     else if (month == 12)
-     {return 31;}
+        return 31;
+     }else if (month == 2) && (isLeapYear(year) = true){
+        return 29;
+     }else
+        return 28;
+     }else if (month == 3){
+        return 31;
+     }else if (month == 4){
+        return 30;
+     }else if (month == 5){
+        return 31;
+     }else if (month == 6){
+        return 30;
+     }else if (month == 7){
+        return 31;
+     }else if (month == 8){
+        return 31;
+     }else if (month == 9){
+        return 30;
+     }else if (month == 10){
+        return 31;
+     }else if (month == 11){
+        return 30;
+     }else if (month == 12){
+        return 31;
+     }
    }
 
   /**
