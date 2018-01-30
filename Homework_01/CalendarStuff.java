@@ -157,7 +157,7 @@ public class CalendarStuff {
      if ((month1 == month2) && (year1 == year2) && (day1 == day2)) {
       return 0;
    }
-   else if ((year1 > year2))
+   else if ((year1 > year2) || ((year1 == year2) && (month1 > month2)) || ((year1 == year2) && (month1 == month2) && (day1 > day2)))
           {
             return 1;
           }
@@ -175,34 +175,35 @@ public class CalendarStuff {
    *         be decremented to make the appropriate index value
    */
    public static boolean isValidDate( long month, long day, long year ) {
-     if (month == 1) && (day <= 31) && (day >= 1)
-     {return true;}
-     else if (month == 2) && (day <= 29) && (day >= 1) && (isLeapYear year) = true
-     {return true;}
-     else if (month == 2) && (day <= 28) && (day >= 1) && (isLeapYear year) = false
-     {return true;}
-     else if (month == 3) && (day <= 31) && (day >= 1)
-     {return true;}
-     else if (month == 4) && (day <= 30) && (day >= 1)
-     {return true;}
-     else if (month == 5) && (day <= 31) && (day >= 1)
-     {return true;}
-     else if (month == 6) && (day <= 30) && (day >= 1)
-     {return true;}
-     else if (month == 7) && (day <= 31) && (day >= 1)
-     {return true;}
-     else if (month == 8) && (day <= 31) && (day >= 1)
-     {return true;}
-     else if (month == 9) && (day <= 30) && (day >= 1)
-     {return true;}
-     else if (month == 10) && (day <= 31) && (day >= 1)
-     {return true;}
-     else if (month == 11) && (day <= 30) && (day >= 1)
-     {return true;}
-     else if (month == 12) && (day <= 31) && (day >= 1)
-     {return true;}
-     else
-     {return false;}
+     if ((month == 1) && (day <= 31) && (day >= 1)){
+        return true;
+     }else if ((month == 2) && (day <= 29) && (day >= 1) && (isLeapYear (year) == true)){
+        return true;
+     }else if ((month == 2) && (day <= 28) && (day >= 1) && (isLeapYear (year) == false)){
+        return true;
+     }else if ((month == 3) && (day <= 31) && (day >= 1)){
+       return true;
+     }else if ((month == 4) && (day <= 30) && (day >= 1)){
+        return true;
+     }else if ((month == 5) && (day <= 31) && (day >= 1)){
+        return true;
+     }else if ((month == 6) && (day <= 30) && (day >= 1)){
+        return true;
+     }else if ((month == 7) && (day <= 31) && (day >= 1)){
+        return true;
+     }else if ((month == 8) && (day <= 31) && (day >= 1)){
+        return true;
+     }else if ((month == 9) && (day <= 30) && (day >= 1)){
+        return true;
+     }else if ((month == 10) && (day <= 31) && (day >= 1)){
+        return true;
+     }else if ((month == 11) && (day <= 30) && (day >= 1)){
+        return true;
+     }else if ((month == 12) && (day <= 31) && (day >= 1)){
+        return true;
+     }else {
+     return false;
+    }
    }
 
   /**
@@ -211,33 +212,34 @@ public class CalendarStuff {
    * @return         String containing the string value of the month (no spaces)
    */
    public static String toMonthString( int month ) {
-     if (month == 1)
-     {System.out.println("JANUARY")};
-     else if (month == 2)
-     {System.out.println("FEBRUARY")};
-     else if (month == 3)
-     {System.out.println("MARCH")};
-     else if (month == 4)
-     {System.out.println("APRIL")};
-     else if (month == 5)
-     {System.out.println("MAY")};
-     else if (month == 6)
-     {System.out.println("JUNE")};
-     else if (month == 7)
-     {System.out.println("JULY")};
-     else if (month == 8)
-     {System.out.println("AUGUSTt")};
-     else if (month == 9)
-     {System.out.println("SEPTEMBER")};
-     else if (month == 10)
-     {System.out.println("OCTOBER")};
-     else if (month == 11)
-     {System.out.println("NOVEMBER")};
-     else if (month == 12)
-     {System.out.println("DECEMBER")};
-     else
+     if (month == 1){
+        return "JANUARY";
+     }else if (month == 2){
+       return "FEBRUARY";
+     }else if (month == 3){
+       return "MARCH";
+     }else if (month == 4){
+       return "APRIL";
+     }else if (month == 5){
+       return "MAY";
+     }else if (month == 6){
+       return "JUNE";
+     }else if (month == 7){
+       return "JULY";
+     }else if (month == 8){
+       return "AUGUST";
+     }else if (month == 9){
+       return "SEPTEMBER";
+     }else if (month == 10){
+       return "OCTOBER";
+     }else if (month == 11){
+       return "NOVEMBER";
+     }else if (month == 12){
+      return "DECEMBER";
+     }else{
      throw new IllegalArgumentException( "Illegal month value given to 'toMonthString()'." );
-      }
+     }
+  }
 
 
   /**
@@ -285,25 +287,23 @@ public class CalendarStuff {
 
       long dayCount = 0;
 
-      if ((year1 > year2) || (year1 == year2) && (month1 > month2) || (year1 == year2) &&
-      (month1 == month2) && (day1 > day2))
-      {
+      if ((year1 > year2) || ((year1 == year2) && (month1 > month2)) || ((year1 == year2) && (month1 == month2) && (day1 > day2))){
         //Here, we are preserving date1 so that we may later switch it to date2
-        long daySwitch = day1;
-        long monthSwitch = month1;
-        long yearSwitch = year1;
+        long tempDay = day1;
+        long tempMonth = month1;
+        long tempYear = year1;
 
         // Now we have to switch date1 with date2
 
-        day1 = day2;
-        month1 = month2;
-        year1 = year2;
+        long day1 = day2;
+        long month1 = month2;
+        long year1 = year2;
 
         //Finally, switch date2 with date1
 
-        day1 = daySwitch;
-        month1 = monthSwitch;
-        year1 = yearSwitch;
+        long day1 = tempDay;
+        long month1 = tempMonth;
+        long year1 = tempYear;
         }
 
         while (year1 < year2) || (year1 == year2) && (month1 < month2) || (year1 == year2) &&
@@ -311,14 +311,14 @@ public class CalendarStuff {
         {
           day1++
           if(isValidDate(month1, day1, year1)){
-            day1 = 1;
-            month1++;
+             day1 = 1;
+             month1++;
           }
           if(isVaildDate(month1, day1, year1)){
-            month1 = 1;
-            year1++;
+             month1 = 1;
+             year1++;
           }
-          dayCount++;
+           dayCount++;
         }
         return dayCount;
       }
