@@ -121,6 +121,7 @@ public class CalendarStuff {
      }else if (month == 12){
         return 31;
      }
+     return -1;
    }
 
   /**
@@ -164,6 +165,7 @@ public class CalendarStuff {
    else {
      return -1;
    }
+ }
 
   /**
    * A method to return whether a date is a valid date
@@ -248,24 +250,24 @@ public class CalendarStuff {
    * @return       String containing the string value of the day (no spaces)
    */
    public static String toDayOfWeekString( int day ) {
-     if (day == 1)
-     {System.out.println("SUNDAY");}
-     else if (day == 2)
-     {System.out.println("MONDAY");}
-     else if (day == 3)
-     {System.out.println("TUESDAY");}
-     else if (day == 4)
-     {System.out.println("WEDNESDAY");}
-     else if (day == 5)
-     {System.out.println("THURSDAY");}
-     else if (day == 6)
-     {System.out.println("FRIDAY");}
-     else if (day == 7)
-     {System.out.println("SATURDAY");}
-     else
-     throw new IllegalArgumentException( "Illegal month value given to 'toDayOfWeekString()'." );
-      }
-   }
+     if (day == 1){
+        return "SUNDAY";
+     }else if (day == 2){
+        return "MONDAY";
+     }else if (day == 3){
+        return "TUESDAY";
+     }else if (day == 4){
+        return "WEDNESDAY";
+     }else if (day == 5){
+        return "THURSDAY";
+     }else if (day == 6){
+        return "FRIDAY";
+     }else if (day == 7){
+         return "SATURDAY";
+     }else{
+        return "Invalid value entered.";
+     }
+  }
 
   /**
    * A method to return a count of the total number of days between two valid dates
@@ -295,26 +297,25 @@ public class CalendarStuff {
 
         // Now we have to switch date1 with date2
 
-        long day1 = day2;
-        long month1 = month2;
-        long year1 = year2;
+         day1 = day2;
+         month1 = month2;
+         year1 = year2;
 
         //Finally, switch date2 with date1
 
-        long day1 = tempDay;
-        long month1 = tempMonth;
-        long year1 = tempYear;
+         day1 = tempDay;
+         month1 = tempMonth;
+         year1 = tempYear;
         }
 
-        while (year1 < year2) || (year1 == year2) && (month1 < month2) || (year1 == year2) &&
-        (month1 == month2) && (day1 < day2))
-        {
-          day1++
+        while ((year1 < year2) || ((year1 == year2) && (month1 < month2)) ||
+              ((year1 == year2) && (month1 == month2) && (day1 < day2))){
+            day1++;
           if(isValidDate(month1, day1, year1)){
              day1 = 1;
              month1++;
           }
-          if(isVaildDate(month1, day1, year1)){
+          if(isValidDate(month1, day1, year1)){
              month1 = 1;
              year1++;
           }
@@ -322,3 +323,4 @@ public class CalendarStuff {
         }
         return dayCount;
       }
+    }
