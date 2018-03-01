@@ -1,10 +1,7 @@
 public class Die {
-
-  /**
-   * private instance data
-   */
+  
    private int sides;
-   private int pips;
+   private int dots;
    private final int MINIMUM_SIDES = 4;
 
    // public constructor:
@@ -14,12 +11,15 @@ public class Die {
    * @throws       IllegalArgumentException
    * Note: parameter must be checked for validity; invalid value must throw "IllegalArgumentException"
    */
-   public Die( int nSides ) {
-      if( MINIMUM_SIDES > nSides ) {
+   public Die( int nSides )
+   {
+      if( MINIMUM_SIDES > nSides )
+      {
          throw new IllegalArgumentException( "side count" );
-      } else {
+      } else
+      {
          this.sides = nSides;
-         this.pips  = nSides;
+         this.dots  = nSides;
       }
    }
 
@@ -27,15 +27,17 @@ public class Die {
    * Roll THIS die and return the result
    * @return  integer value of the result of the roll, randomly selected
    */
-   public int roll() {
-      this.pips = (int)Math.floor( Math.random() * this.sides + 1 );
-      return this.pips;
+   public int roll()
+   {
+      this.dots = (int)Math.floor( Math.random() * this.sides + 1 );
+      return this.dots;
    }
 
   /**
    * @return the side count of THIS die instance
    */
-   public int getSides() {
+   public int getSides()
+   {
       return this.sides;
    }
 
@@ -46,8 +48,9 @@ public class Die {
    *  "value"?
    * @return the integer pip count of THIS die instance
    */
-   public int getValue() {
-      return this.pips;
+   public int getValue()
+   {
+      return this.dots;
    }
 
   /**
@@ -56,7 +59,8 @@ public class Die {
    * @return      The new number of sides, in case anyone is looking
    * @throws      IllegalArgumentException
    */
-   public void setSides( int sides ) {
+   public void setSides( int sides )
+   {
       this.sides = sides;
    }
 
@@ -64,22 +68,25 @@ public class Die {
    * Public Instance method that returns a String representation of THIS die instance
    * @return String representation of this Die
    */
-   public String toString() {
-      return "{" + this.pips + "}";
+   public String toString()
+   {
+      return "{" + this.dots + "}";
    }
 
   /**
    * Class-wide method that returns a String representation of THIS die instance
    * @return String representation of this Die
    */
-   public static String toString( Die d ) {
+   public static String toString( Die d )
+   {
       return "";
    }
 
   /**
    * A little test main to check things out
    */
-   public static void main( String[] args ) {
+   public static void main( String[] args )
+   {
       Die d = null;
       try { d = new Die( 1 ); }
       catch( IllegalArgumentException iae ) { System.out.println( "Too few sides requested to constructor...." ); }
