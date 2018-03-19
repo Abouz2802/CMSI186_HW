@@ -1,0 +1,24 @@
+.
+.
+does not compile, 6 errors you need to fix before I can evaluate
+.
+.
+Clock.java:62: error: not a statement
+      double this.angle = 0.0;
+      ^
+Clock.java:62: error: ';' expected
+      double this.angle = 0.0;
+            ^
+ClockSolver.java:16: error: not a statement
+     double this.angle = 0.0;
+     ^
+ClockSolver.java:16: error: ';' expected
+     double this.angle = 0.0;
+           ^
+ClockSolver.java:17: error: not a statement
+     double this.timeSlice = 3;
+     ^
+ClockSolver.java:17: error: ';' expected
+     double this.timeSlice = 3;
+           ^
+6 errors
