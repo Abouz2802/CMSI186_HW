@@ -11,27 +11,33 @@ A total of one point each for the following:
 
 class Clock             : Exists, coding style acceptable   -  1 point
 Constructor             : Freebie, since not really needed  -  1 point
-tick                    : works                             -  1 point
-getHourHandAngle        : works                             -  1 point
-getMinuteHandAngle      : works                             -  1 point
-getHandAngle            : works                             -  1 point
-getTotalSeconds         : works                             -  1 point
-toString                : works                             -  1 point
+tick                    : Doesn't compile; can't check      -  0 point
+getHourHandAngle        : Doesn't compile; can't check      -  0 point
+getMinuteHandAngle      : Doesn't compile; can't check      -  0 point
+getHandAngle            : Doesn't compile; can't check      -  0 point
+getTotalSeconds         : Doesn't compile; can't check      -  0 point
+toString                : Doesn't compile; can't check      -  0 point
 main exists             : Exists                            -  1 point
 Test Code               : Contains some method test code    -  1 point
 
 class ClockSolver       : Exists, coding style acceptable   -  1 point
-Constructor             : Exists, works properly            -  1 point
-HandleInitialArguments  : works                             -  2 point (7/7)
+Constructor             : Doesn't compile; can't check      -  0 point
+HandleInitialArguments  : Doesn't compile; can't check      -  0 point (7/7)
 
-main exists             : works                             -  1 point
-works as advertised     : passes all tests in the series    -  9 points
+main exists             : Doesn't compile; can't check      -  0 point
+works as advertised     : Doesn't compile; can't check      -  0 point
 
 Files in Git            : two files required                -  2 points
 Coding Style overall    : coding style acceptable           -  1 point
 
 
-Total 27 out of 27 = 100% which is an A-plus
+Total 8 out of 27 = 29.63% which is an F
 
-Nice work!
+Anthony, you really need to make sure your code compiles before
+you commit.  There's nothing I can do with the evaluation if the
+code doesn't compile.  This was updated tonight, 2018-03-20 at
+10:15 PM so I'm sure I have the latest that you have committed to
+your repository.
+
+Sorry.
 

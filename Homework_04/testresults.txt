@@ -22,3 +22,14 @@ ClockSolver.java:17: error: ';' expected
      double this.timeSlice = 3;
            ^
 6 errors
+
+In addition, when I fix those 6 errors and recompile, there are
+a total of 45 more that show up.
+
+Anthony, you really need to make sure your code compiles before
+you commit.  There's nothing I can do with the evaluation if the
+code doesn't compile.  This was updated tonight, 2018-03-20 at
+10:15 PM so I'm sure I have the latest that you have committed to
+your repository.
+
+Sorry.

@@ -1,0 +1,50 @@
+Too few sides requested to constructor....
+Too few sides requested to constructor....
+Too few sides requested to constructor....
+roll() test for 4 sided die: 
+You rolled a 4
+You rolled a 1
+You rolled a 2
+You rolled a 1
+You rolled a 1
+Current value is: {1}
+roll() test for 5 sided die: 
+You rolled a 4
+You rolled a 3
+You rolled a 4
+You rolled a 1
+You rolled a 2
+Current value is: {2}
+roll() test for 6 sided die: 
+You rolled a 6
+You rolled a 3
+You rolled a 2
+You rolled a 2
+You rolled a 6
+Current value is: {6}
+roll() test for 7 sided die: 
+You rolled a 3
+You rolled a 6
+You rolled a 7
+You rolled a 7
+You rolled a 7
+Current value is: {7}
+roll() test for 8 sided die: 
+You rolled a 8
+You rolled a 2
+You rolled a 5
+You rolled a 6
+You rolled a 7
+Current value is: {7}
+Current die side count is: 8
+Resetting - current die side count is now: 11
+Rolling with new side count -- 
+   You rolled a 7
+   You rolled a 6
+   You rolled a 4
+   You rolled a 10
+   You rolled a 11
+Resetting - current die side count is now: 17
+Rolling with new side count -- 
+   You rolled a 4
+   current value is: 4
