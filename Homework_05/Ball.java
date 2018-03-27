@@ -130,4 +130,50 @@ public class Ball {
 
       return false;
    }
+
+   public static void main(String args[])
+   {
+      Ball b = new Ball(1, 2, 3, 3);
+      System.out.println("\n Testing Ball Class...");
+      System.out.println("The radius of the ball is " + b.getRadius() + " feet");
+      System.out.println("The weight of the ball is " + b.getWeight());
+      System.out.println("The xPosition of the ball is " + b.getXPosition());
+      System.out.println("The yPosition of the ball is " + b.getYPosition());
+      System.out.println("\n Setting new ball position...");
+      b.setPosition(1, 2);
+      System.out.println("The new xPosition of the ball is " + b.getXPosition());
+      System.out.println("The new yPosition of the ball is " + b.getYPosition());
+      b.getBothPosition();
+      System.out.println("\n Moving ball...");
+      b.moveBall(5);
+      System.out.println("The new xPosition of the ball is " + b.getXPosition());
+      System.out.println("The new yPosition of the ball is " + b.getYPosition());
+      b.moveBall(2);
+      System.out.println("The new xPosition of the ball is " + b.getXPosition());
+      System.out.println("The new yPosition of the ball is " + b.getYPosition());
+      b.moveBall(-3);
+      System.out.println("The new xPosition of the ball is " + b.getXPosition());
+      System.out.println("The new yPosition of the ball is " + b.getYPosition());
+      b.moveBall(1);
+      System.out.println("The new xPosition of the ball is " + b.getXPosition());
+      System.out.println("The new yPosition of the ball is " + b.getYPosition());
+      b.moveBall(4);
+      System.out.println("The new xPosition of the ball is " + b.getXPosition());
+      System.out.println("The new yPosition of the ball is " + b.getYPosition());
+      b.moveBall(2);
+      System.out.println("The new xPosition of the ball is " + b.getXPosition());
+      System.out.println("The new yPosition of the ball is " + b.getYPosition());
+      b.moveBall(1);
+      System.out.println("The new xPosition of the ball is " + b.getXPosition());
+      System.out.println("The new yPosition of the ball is " + b.getYPosition());
+      b.moveBall(0);
+      System.out.println("The new xPosition of the ball is " + b.getXPosition());
+      System.out.println("The new yPosition of the ball is " + b.getYPosition());
+      b.moveBall(-1);
+      System.out.println("The new xPosition of the ball is " + b.getXPosition());
+      System.out.println("The new yPosition of the ball is " + b.getYPosition());
+      Ball c = new Ball(3, 3, 4, 1);
+      System.out.println("The distance between the two balls " + b.getDistance(c));
+      System.out.println("Are the balls colliding? " + b.isColliding(c));
+   }
  }
